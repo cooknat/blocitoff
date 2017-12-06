@@ -1,2 +1,7 @@
 <h1>Profile Page</h1>
 <%= "Welcome to your profile page, #{@user.email}!" %>
+<h3>Here is your list of things to do:</h3>
+<%= render partial: 'items/item' %>
+
+<h3>Submit a new to do Item to your list:</h3>
+<%= render partial: 'items/form', locals: { item: Item.new }  %> 
