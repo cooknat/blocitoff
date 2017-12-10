@@ -1,5 +1,6 @@
 <li id="item_<%= item.id %>">
   <%= item.name %>
   <%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', data: { confirm: 'Confirm that this item is completed?' }, remote: true %>
+  <%= "Created #{distance_of_time_in_words(item.created_at, Time.now)} ago" %>
 </li>
 
